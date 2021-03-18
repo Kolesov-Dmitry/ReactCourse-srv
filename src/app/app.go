@@ -33,8 +33,8 @@ func NewApp(args []string) *App {
 func (a *App) Init() error {
 	var err error
 
-	//dbPath := path.Join(a.appPath, "chat.db")
-	dbPath := "d:/Project/ReactCourse-srv/.bin/chat.db"
+	dbPath := path.Join(a.appPath, "chat.db")
+	//dbPath := "d:/Project/ReactCourse-srv/.bin/chat.db"
 	if a.storage, err = storage.NewBoltDBStorage(dbPath); err != nil {
 		return err
 	}
